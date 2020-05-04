@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_square"
+        android:id="@+id/app_toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"
+            android:textStyle="bold"
+            android:longClickable="false"
+            android:text="Bulls and Cows"/>
+
+        <TextView
+            android:id="@+id/game_rule_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:text="게임방법"
+            android:layout_gravity="right|center"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- A RecyclerView with some commonly used attributes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/status_result_list"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/heart"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/life_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="10"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_centerInParent="true"
+                android:text="숫자를 선택하세요"/>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:id="@+id/num_fir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <NumberPicker
+                android:id="@+id/num_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <NumberPicker
+                android:id="@+id/num_thd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/sel_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="게임시작"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
